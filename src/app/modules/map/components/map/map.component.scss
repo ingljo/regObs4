@@ -1,12 +1,15 @@
-.leaflet-container {
-    width: 100%;
-    height: 100%;
-    position: inherit !important;
-}
-
 app-map-controls {
     position: absolute;
     top: 0;
     right: 0px;
     width: 60px;
+}
+
+.leaflet-container {
+    width: calc(100% * var(--map-scale));
+    height: calc(100% * var(--map-scale));
+    --map-scale-scale: calc(1 / var(--map-scale));
+    --map-scale-translate: calc(50% - (50% * var(--map-scale)));
+    transform: scale(var(--map-scale-scale)) translateX(var(--map-scale-translate)) translateY(var(--map-scale-translate));
+    position: inherit !important;
 }

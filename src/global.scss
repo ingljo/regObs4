@@ -60,6 +60,7 @@
     --ion-color-varsom-orange-shade: #5C90A5;
     --ion-color-varsom-orange-tint: #F5B068;
     --ion-text-color: #262626;
+    --map-scale: 1; //Use 2 for retina display
 }
 
 .ion-color-varsom-orange {
@@ -307,3 +308,16 @@ app-header {
         }
     }
 }
+
+/* Retina Display Media Query */
+@media
+(-webkit-min-device-pixel-ratio: 1.5),
+(   min--moz-device-pixel-ratio: 1.5),
+(     -o-min-device-pixel-ratio: 3/2),
+(        min-device-pixel-ratio: 1.5),
+(                min-resolution: 1.5dppx) {
+    :root {
+        --map-scale: 2;
+    }
+}
+

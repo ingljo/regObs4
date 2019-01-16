@@ -27,7 +27,7 @@ export class UserMarker {
         this.position = position;
         this.userMarkerIcon = L.divIcon({
             className: 'leaflet-usermarker',
-            iconSize: [18, 18],
+            iconSize: [18 * 2, 18 * 2],
             html: '<div class=\'heading\'></div><i class=\'pulse\'></i>'
         });
         const latLng = { lat: position.coords.latitude, lng: position.coords.longitude };
